@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Breadcrumbs;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Routing\Router;
+
 final class Breadcrumbs
 {
     /**
@@ -13,6 +16,8 @@ final class Breadcrumbs
 
     public function __construct(
         private readonly Generator $generator,
+        private readonly Router $router,
+        private readonly Factory $viewFactory,
     ) {
         //
     }
@@ -22,20 +27,33 @@ final class Breadcrumbs
         $this->callbacks[$name] = $callback;
     }
 
-    public function render(string $name, array $parameters = [], string $view = 'full-width-bar'): string
+    public function render(?string $name = null, array $parameters = [], string $view = 'full-width-bar'): string
     {
         return $this->renderWithView($name, $parameters, 'breadcrumbs::'.$view);
     }
 
     public function renderWithView(string $name, array $parameters, string $view): string
     {
-        return view($view, [
+        return $this->viewFactory->make($view, [
             'breadcrumbs' => $this->generate($name, $parameters),
         ])->render();
     }
 
-    public function generate(string $name, array $parameters = []): array
+    public function generate(?string $name = null, array $parameters = []): array
     {
-        return $this->generator->generate($this->callbacks, $name, $parameters);
+        [$actualName, $actualParameters] = $this->getCurrentRoute($name, $parameters);
+
+        return $this->generator->generate($this->callbacks, $actualName, $actualParameters);
+    }
+
+    private function getCurrentRoute(?string $name = null, array $parameters = []): array
+    {
+        if (!empty($name) && !empty($parameters)) {
+            return [$name, $parameters];
+        }
+
+        $route = $this->router->current();
+
+        return [$route->getName(), $route->parameters()];
     }
 }

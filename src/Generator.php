@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Breadcrumbs;
 
+use BombenProdukt\Breadcrumbs\Data\Breadcrumb;
+
 final class Generator
 {
     /**

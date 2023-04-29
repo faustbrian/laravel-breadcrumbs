@@ -16,6 +16,7 @@ final class AnalysisTest extends AbstractAnalysisTestCase
     protected static function getIgnored(): array
     {
         return [
+            'Pest\Laravel\get',
             'Spatie\Snapshots\assertMatchesHtmlSnapshot',
         ];
     }

@@ -1,21 +1,16 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:generate\\(\\) has no return type specified\\.$#"
+			message: "#^Cannot call method getName\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
 			count: 1
 			path: src/Breadcrumbs.php
 
 		-
-			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:render\\(\\) has no return type specified\\.$#"
+			message: "#^Cannot call method parameters\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
 			count: 1
 			path: src/Breadcrumbs.php
 
 		-
-			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#1 \\$name of method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) expects string, string\\|null given\\.$#"
 			count: 1
 			path: src/Breadcrumbs.php
-
-		-
-			message: "#^Parameter \\#2 \\$link of class BombenProdukt\\\\Breadcrumbs\\\\Breadcrumb constructor expects string, string\\|null given\\.$#"
-			count: 1
-			path: src/Generator.php

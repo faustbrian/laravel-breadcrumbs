@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace BombenProdukt\Breadcrumbs;
+namespace BombenProdukt\Breadcrumbs\Data;
 
 final readonly class Breadcrumb
 {
     public function __construct(
         private string $name,
-        private string $link,
+        private ?string $link,
     ) {
         //
     }
@@ -18,7 +18,7 @@ final readonly class Breadcrumb
         return $this->name;
     }
 
-    public function getLink(): string
+    public function getLink(): ?string
     {
         return $this->link;
     }
