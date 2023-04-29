@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:generate\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:render\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Parameter \\#2 \\$link of class BombenProdukt\\\\Breadcrumbs\\\\Breadcrumb constructor expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Generator.php
