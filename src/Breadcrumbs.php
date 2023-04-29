@@ -22,19 +22,19 @@ final class Breadcrumbs
         $this->callbacks[$name] = $callback;
     }
 
-    public function render(string $name, array $parameters = [], string $view = 'full-width-bar')
+    public function render(string $name, array $parameters = [], string $view = 'full-width-bar'): string
     {
         return $this->renderWithView($name, $parameters, 'breadcrumbs::'.$view);
     }
 
-    public function renderWithView(string $name, array $parameters, string $view)
+    public function renderWithView(string $name, array $parameters, string $view): string
     {
         return view($view, [
             'breadcrumbs' => $this->generate($name, $parameters),
         ])->render();
     }
 
-    public function generate(string $name, array $parameters = [])
+    public function generate(string $name, array $parameters = []): array
     {
         return $this->generator->generate($this->callbacks, $name, $parameters);
     }
