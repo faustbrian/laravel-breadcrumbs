@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Cannot call method getName\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Cannot call method parameters\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 2
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method BombenProdukt\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
