@@ -1,0 +1,65 @@
+{
+    "name": "basecodeoy/breadcrumbs",
+    "description": "A package to easily make use of breadcrumbs with Laravel",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "BaseCode Oy",
+        "laravel",
+        "breadcrumbs"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/basecodeoy/breadcrumbs",
+    "support": {
+        "issues": "https://github.com/basecodeoy/breadcrumbs/issues",
+        "source": "https://github.com/basecodeoy/breadcrumbs",
+        "security": "https://github.com/basecodeoy/breadcrumbs/blob/main/.github/SECURITY.md"
+    },
+    "require": {
+        "php": "^8.3",
+        "basecodeoy/crate": "^1.0.0",
+        "illuminate/contracts": "^11.0"
+    },
+    "require-dev": {
+        "basecodeoy/standards": "^1.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BaseCodeOy\\Breadcrumbs\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        },
+        "audit": {
+            "abandoned": "report"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Breadcrumbs": "BaseCodeOy\\Breadcrumbs\\Facades\\Breadcrumbs"
+            },
+            "providers": [
+                "BaseCodeOy\\Breadcrumbs\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "symbol-whitelist": [
+        "array",
+        "bool",
+        "false",
+        "int",
+        "null",
+        "self",
+        "string",
+        "true",
+        "Illuminate\\Contracts\\View\\Factory",
+        "Illuminate\\Routing\\Router",
+        "Illuminate\\Support\\Facades\\Facade"
+    ]
+}
