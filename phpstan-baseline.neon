@@ -1,0 +1,111 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Cannot call method in\\(\\) on iterable\\<SplFileInfo\\>\\.$#"
+			count: 1
+			path: .php-cs-fixer.php
+
+		-
+			message: "#^Cannot call method getName\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Cannot call method parameters\\(\\) on Illuminate\\\\Routing\\\\Route\\|null\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:generate\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:generate\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:getCurrentRoute\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:getCurrentRoute\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:render\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method BaseCodeOy\\\\Breadcrumbs\\\\Breadcrumbs\\:\\:renderWithView\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Breadcrumbs.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Data\\\\Breadcrumb\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Data/Breadcrumb.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Data\\\\Route\\:\\:__construct\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Data/Route.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Data\\\\Route\\:\\:getParameters\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Data/Route.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Data\\\\Route\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Data/Route.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Generator\\:\\:call\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Generator.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Generator\\:\\:generate\\(\\) has parameter \\$callbacks with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Generator.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Generator\\:\\:generate\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Generator.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Generator\\:\\:generate\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Generator.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Breadcrumbs\\\\Generator\\:\\:parent\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Generator.php
+
+		-
+			message: "#^Method Tests\\\\Application\\\\AnalysisTest\\:\\:getIgnored\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Application/AnalysisTest.php
+
+		-
+			message: "#^Static method BaseCodeOy\\\\Breadcrumbs\\\\Facades\\\\Breadcrumbs\\:\\:generate\\(\\) invoked with 0 parameters, 1\\-2 required\\.$#"
+			count: 1
+			path: tests/Feature/BreadcrumbsTest.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: tests/Pest.php
